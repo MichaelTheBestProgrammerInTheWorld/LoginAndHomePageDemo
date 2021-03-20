@@ -16,4 +16,8 @@ public interface ApiInterface {
     Call<ApiResponse> login(@Header("lang") String lang,
                               @Header("apiKey") String apiKey,
                               @Body HashMap<String, Object> body);
+
+    @POST("getHome/")
+    Call<ApiResponse> home(@Header("lang") String lang,
+                            @Header("apiKey") String apiKey);
 }
